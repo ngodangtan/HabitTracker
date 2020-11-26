@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/habitList"
-        android:name="ngodangtan.com.habittracker.HabitList"
+        android:name="ngodangtan.com.habittracker.ui.fragments.habitlist.HabitList"
         android:label="Habits"
         tools:layout="@layout/fragment_habit_list" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/createHabitItem"
-        android:name="ngodangtan.com.habittracker.CreateHabitItem"
+        android:name="ngodangtan.com.habittracker.ui.fragments.createhabit.CreateHabitItem"
         android:label="create habit"
         tools:layout="@layout/fragment_create_habit_item" >
         <action
@@ -28,11 +28,14 @@
     </fragment>
     <fragment
         android:id="@+id/updateHabitItem"
-        android:name="ngodangtan.com.habittracker.UpdateHabitItem"
+        android:name="ngodangtan.com.habittracker.ui.fragments.updatehabit.UpdateHabitItem"
         android:label="Update Habit"
         tools:layout="@layout/fragment_update_habit_item" >
         <action
             android:id="@+id/action_updateHabitItem_to_habitList"
             app:destination="@id/habitList" />
+        <argument
+            android:name="selectedHabit"
+            app:argType="ngodangtan.com.habittracker.data.models.Habit" />
     </fragment>
 </navigation>
