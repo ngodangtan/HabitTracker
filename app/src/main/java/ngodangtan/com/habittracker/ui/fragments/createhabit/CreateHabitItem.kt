@@ -36,8 +36,6 @@ TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener{
 
     private lateinit var habieViewModel: HabitViewModel
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         habieViewModel = ViewModelProvider(this).get(HabitViewModel::class.java)
 
